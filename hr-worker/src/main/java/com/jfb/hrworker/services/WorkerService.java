@@ -1,6 +1,5 @@
 package com.jfb.hrworker.services;
 
-import java.util.List;
 import java.util.Optional;
 
 import com.jfb.hrworker.dto.WorkerDTO;
