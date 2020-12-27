@@ -30,8 +30,7 @@ public class WorkerResource {
   private WorkerService service;
 
   @GetMapping
-  public ResponseEntity<Page<WorkerDTO>> findAll(
-      @RequestParam(value = "page", defaultValue = "0") Integer page,
+  public ResponseEntity<Page<WorkerDTO>> findAll(@RequestParam(value = "page", defaultValue = "0") Integer page,
       @RequestParam(value = "linesPerPage", defaultValue = "12") Integer linesPerPage,
       @RequestParam(value = "direction", defaultValue = "ASC") String direction,
       @RequestParam(value = "orderBy", defaultValue = "name") String orderBy) {
@@ -43,6 +42,15 @@ public class WorkerResource {
 
   @GetMapping(value = "/{id}")
   public ResponseEntity<WorkerDTO> findById(@PathVariable Long id) {
+
+    /* Test de Hystrix 
+    try {
+      Thread.sleep(3000L);
+    } catch (InterruptedException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    } 
+    */
 
     logger.info("PORT = " + env.getProperty("local.server.port"));
 
