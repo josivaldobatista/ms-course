@@ -31,9 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+ms-course.code-workspace
+hrworker.code-workspace
 
 ### Outros ###
-hrworker.code-workspace
 /docs/**
 
 ### Mac ###
